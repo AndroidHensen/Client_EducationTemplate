@@ -70,15 +70,34 @@ public class CourseDetailActivity extends BaseActivity {
                 new ImageGetterImpl(tv_content, data.getContent(),
                         DensityUtils.getDisplayWidth(this),
                         DensityUtils.getDisplayHeight(this)), null));
-        if (data.getTitle().endsWith(".doc") || data.getTitle().endsWith(".docx")) {
+        if (data.getTitle().contains(".doc")
+                || data.getTitle().contains(".docx")
+                || data.getSmall_title().contains(".doc")
+                || data.getSmall_title().contains(".docx")
+                || data.getContent().contains(".doc")
+                || data.getContent().contains(".docx")) {
             iv_type.setBackgroundResource(R.drawable.ic_course_word);
-        } else if (data.getTitle().endsWith(".xls") || data.getTitle().endsWith(".xlsx")) {
+        } else if (data.getTitle().contains(".xls")
+                || data.getTitle().contains(".xlsx")
+                || data.getSmall_title().contains(".xls")
+                || data.getSmall_title().contains(".xlsx")
+                || data.getContent().contains(".xls")
+                || data.getContent().contains(".xlsx")) {
             iv_type.setBackgroundResource(R.drawable.ic_course_excel);
-        } else if (data.getTitle().endsWith(".pdf")) {
+        } else if (data.getTitle().contains(".pdf")
+                || data.getSmall_title().contains(".pdf")
+                || data.getContent().contains(".pdf")) {
             iv_type.setBackgroundResource(R.drawable.ic_course_pdf);
-        } else if (data.getTitle().endsWith(".swf")) {
+        } else if (data.getTitle().contains(".swf")
+                || data.getSmall_title().contains(".swf")
+                || data.getContent().contains(".swf")) {
             iv_type.setBackgroundResource(R.drawable.ic_course_flash);
-        } else if (data.getTitle().endsWith(".ppt") || data.getTitle().endsWith(".pptx")) {
+        } else if (data.getTitle().contains(".ppt")
+                || data.getTitle().contains(".pptx")
+                || data.getSmall_title().contains(".ppt")
+                || data.getSmall_title().contains(".pptx")
+                || data.getContent().contains(".ppt")
+                || data.getContent().contains(".pptx")) {
             iv_type.setBackgroundResource(R.drawable.ic_course_ppt);
         } else {
             iv_type.setBackgroundResource(R.drawable.ic_course_notype);
