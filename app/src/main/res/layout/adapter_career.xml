@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_margin="8dp">
+
+        <ImageView
+            android:id="@+id/iv_career_img"
+            android:layout_width="100dp"
+            android:layout_height="56dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_career_img_1" />
+
+        <ImageView
+            android:id="@+id/iv_career_icon"
+            android:layout_width="14dp"
+            android:layout_height="17dp"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/iv_career_img"
+            android:background="@drawable/ic_career_title" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/iv_career_icon"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@+id/iv_career_icon"
+            android:text="MBTI职业性格测试完整版"
+            android:textSize="14dp" />
+
+        <Button
+            android:id="@+id/bt_jump"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="8dp"
+            android:background="#198AFF"
+            android:padding="4dp"
+            android:text="点击进入测试 >"
+            android:textColor="#ffffff"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/iv_career_img"
+            android:ellipsize="end"
+            android:lines="5"
+            android:text="MBTI的全名是Myers-Briggs Type Indicator。它是一种迫选型、自我报告式的性格评估理论模型，用以衡量和描述人们在获取信息、作出决策、对待生活等方面的心理活动规律和性格类型。"
+            android:textSize="12dp" />
+
+
+    </RelativeLayout>
+
+    <include layout="@layout/include_common_split_line_hor" />
+
+</LinearLayout>
